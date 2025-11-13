@@ -24,7 +24,7 @@ The final design includes a fully developed mechanical concept and a matching cu
 
 ## 2. Mechanical Design
 
-![Mechanical overview](media/mechanism_overview.png)
+![Mechanical overview](media/3D_robot_part.png)
 
 
 ### Key Features
@@ -50,7 +50,7 @@ All mechanical files are located in:
 
 ## 3. Electronics Design
 
-![PCB 3D view](media/pcb_top_3d.png)
+![PCB top view](media/pcb_top.png)
 
 ### Key Features
 - STM32L476RG microcontroller  
