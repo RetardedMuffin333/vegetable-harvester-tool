@@ -24,6 +24,9 @@ The final design includes a fully developed mechanical concept and a matching cu
 
 ## 2. Mechanical Design
 
+![Mechanical overview](media/mechanism_overview.png)
+
+
 ### Key Features
 - Four-arm cage gripping mechanism  
 - Two fixed arms + two moving arms  
@@ -46,6 +49,8 @@ All mechanical files are located in:
 ---
 
 ## 3. Electronics Design
+
+![PCB 3D view](media/pcb_top_3d.png)
 
 ### Key Features
 - STM32L476RG microcontroller  
