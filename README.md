@@ -132,6 +132,7 @@ Located in:
 
 ## 8. Repository Structure
 
+```
 vegetable-harvester-tool/
 │
 ├── mechanical/
@@ -139,6 +140,7 @@ vegetable-harvester-tool/
 ├── media/
 ├── docs/
 └── README.md
+```
 
 ---
 
