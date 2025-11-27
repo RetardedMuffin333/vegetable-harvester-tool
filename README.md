@@ -75,7 +75,43 @@ All electronics files are located in:
 
 ---
 
-## 4. Media
+## 4. Firmware
+
+### Overview
+The firmware folder contains **prototype firmware** for the vegetable-harvester end-effector tool.  
+The goal of this code is to document and simulate the intended behaviour of the tool without requiring access to the real robot or STM32 hardware.
+
+### Key Features
+- Hardware-agnostic state machine architecture  
+- PC-friendly stub implementation for testing  
+- No external dependencies — pure C11  
+- Allows validation of logic and behaviour on any PC  
+
+### Files
+- **`tool_controller.c`** — High-level state machine controlling the harvester tool:
+  - Opens/closes gripper  
+  - Lowers/raises tool  
+  - Manages cutting height  
+  - Handles emergency-stop  
+  - Uses abstract `hw_*` hardware calls (fully hardware-agnostic)  
+
+- **`hw_stub.c`** — PC-friendly stub implementation of the hardware layer:
+  - Replaces real STM32 GPIO/PWM/UART with `printf()` simulations  
+  - Allows running the full tool cycle on any PC  
+  - Useful for validating logic and behaviour  
+
+### Compile & Run (Optional)
+```bash
+gcc tool_controller.c hw_stub.c -std=c11 -Wall -Wextra -o harvester_test
+./harvester_test
+```
+
+All firmware files are located in:  
+`/firmware/`
+
+---
+
+## 6. Media
 
 Images, renders, videos, mechanism animations, exploded views, and PCB 3D previews.
 
@@ -84,7 +120,7 @@ Stored in:
 
 ---
 
-## 5. Documentation
+## 7. Documentation
 
 - Mechanical report (PDF)  
 - Electronics report (PDF)  
@@ -95,7 +131,7 @@ Located in:
 
 ---
 
-## 6. Skills Demonstrated
+## 8. Skills Demonstrated
 
 ### Mechanical Engineering
 - CAD modeling and assemblies  
@@ -119,7 +155,7 @@ Located in:
 
 ---
 
-## 7. Future Improvements
+## 9. Future Improvements
 
 - Reduce overall mass of the tool  
 - Optimize motor selection and torque requirements  
@@ -130,13 +166,14 @@ Located in:
 
 ---
 
-## 8. Repository Structure
+## 10. Repository Structure
 
 ```
 vegetable-harvester-tool/
 │
 ├── mechanical/
 ├── electronics/
+├── firmware/
 ├── media/
 ├── docs/
 └── README.md
@@ -144,7 +181,7 @@ vegetable-harvester-tool/
 
 ---
 
-## 9. Author
+## 11. Author
 
 **Aljaž Murovec**  
 University of Ljubljana — Faculty of Electrical Engineering  
